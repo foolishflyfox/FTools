@@ -27,3 +27,13 @@ def ShortestDist(LinePoint1, LinePoint2, Point3):
     shortest_point = ShortestPoint(LinePoint1, LinePoint2, Point3)
     vec = tuple(p-p3 for p, p3 in zip(shortest_point, Point3))
     return ScalarProduct(vec, vec)**0.5
+
+# 判断二维平面多边形是否为顺时针绘制
+# 参数为一个二元组数组: [(x1,y1), (x2,y2), (x3,y3), ...]
+def IsClockwise(polygon):
+    if(len(polygon) < 3):
+        return False
+    vsum = 0
+    for i in range(0, len(polygon)):
+        vsum += (polygon[i][0]-polygon[i-1][0])*(polygon[i][1]+polygon[i-1][1])
+    return vsum > 0
