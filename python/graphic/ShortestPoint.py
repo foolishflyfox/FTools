@@ -22,3 +22,8 @@ def ShortestPoint(LinePoint1, LinePoint2, Point3):
     else:
         return tuple(i+lamb*j for i, j in zip(LinePoint2,vector21))
 
+# 找出指定点到线段的最短距离
+def ShortestDist(LinePoint1, LinePoint2, Point3):
+    shortest_point = ShortestPoint(LinePoint1, LinePoint2, Point3)
+    vec = tuple(p-p3 for p, p3 in zip(shortest_point, Point3))
+    return ScalarProduct(vec, vec)**0.5

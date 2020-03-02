@@ -7,4 +7,5 @@
         - `ShortestPoint.py`: 寻找距离最近的点
             - `ScalarProduct`: 向量点积
             - `ShortestPoint`: 找出一条线段中与指定点距离最短的点
+            - `ShortestDist`: 找出指定点到线段的最短距离
 
