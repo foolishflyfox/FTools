@@ -2,3 +2,5 @@ python/**/test.py
 python/**/__pycache__
 C++/**/a.out
 .vscode/*
+**/tmp.txt
+
