@@ -8,6 +8,7 @@
         - `ShortestPoint`: 找出一条线段中与指定点距离最短的点
         - `ShortestDist`: 找出指定点到线段的最短距离
         - `IsClockwise`: 判断二维平面多边形是否顺时针绘制
+        - `UnitNormalVector`: 获取单位法向量
 - **C++**: c++ 相关技术
     - **boost**: boost 库的使用
         - `geometry.cpp`: 图形库的使用

@@ -37,3 +37,14 @@ def IsClockwise(polygon):
     for i in range(0, len(polygon)):
         vsum += (polygon[i][0]-polygon[i-1][0])*(polygon[i][1]+polygon[i-1][1])
     return vsum > 0
+
+# 获取单位法向量
+# e.g. UnitNormalVector((0,0), (0, 1)) => (1, 0)
+def UnitNormalVector(point1, point2):
+    line12 = [v2-v1 for v1,v2 in zip(point1, point2)]
+    if line12[0]==0 and line12[1]==0:
+        return (0,0)
+    x, y = line12[0], line12[1]
+    normal_len = (y*y+x*x)**0.5
+    unit_normal = (y/normal_len, -x/normal_len)
+    return unit_normal
