@@ -9,6 +9,7 @@
         - `ShortestDist`: 找出指定点到线段的最短距离
         - `IsClockwise`: 判断二维平面多边形是否顺时针绘制
         - `UnitNormalVector`: 获取单位法向量
+    - `pywc.py`: 字数统计(中/英文、数字、空白符统计)
 - **C++**: c++ 相关技术
     - **boost**: boost 库的使用
         - `geometry.cpp`: 图形库的使用
