@@ -18,15 +18,17 @@ class CharType(Enum):
     
 
 def Count(lines):
-    print("Lines: ", len(lines))
     english_char = 0
     chinese_char = 0
     blank_char = 0
     digit_char = 0
     english_word = 0
+    space_line = 0
     # 简单起见，12.32视为两个数字
     digit_word = 0
     for line in lines:
+        if line=="\n" or line=="\r\n":
+            space_line += 1
         t0 = CharType.OTHER_CHAR
         for i in range(len(line)):
             c = line[i]
@@ -51,9 +53,12 @@ def Count(lines):
     print("English word :", english_word)
     print("Chinese char :", chinese_char)
     print("Digit word :", digit_word)
-    print("sum :", english_word+chinese_char+digit_word)
+    print("Sum :", english_word+chinese_char+digit_word)
     print('-'*20)
     print('Blank char :', blank_char)
+    print("Lines :", len(lines))
+    print("Space line :", space_line)
+    print("Non-space line :", len(lines)-space_line)
 
 
 if __name__ == "__main__":
