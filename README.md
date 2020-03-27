@@ -63,6 +63,20 @@ Space line : 2
 Non-space line : 3
 ```
 
+### `plantuml2img.py`
+
+将 markdown 中的 plantuml 代码块全部输出为图片格式，使用该脚本需要完成以下依赖的安装：
+
+- 安装 graphviz
+- 安装 VS Code
+- 在 VS Code 中安装 PlantUML 
+
+通常来说，svg、png、latex、等格式都能正常导出，但pdf不能正常导出，变通方法为：生成svg格式 -> 用浏览器打开该svg格式图片 -> 打印页面为pdf格式。
+
+要求：markdown 中的 plantuml 代码段必须以`@startuml 名称`开始、`@enduml`结尾，或者以`@startmindmap 名称`开始，`endmindmap`结尾，其中的名称即为导出文件的名称，如果没有设置名称，则视为不导出。
+
+通过 `plantuml2img.py -h` 可以查看使用方法。
+
 ## C++
 
 c++ 相关技术。
