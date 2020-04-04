@@ -13,6 +13,8 @@
 
 python 相关技术。
 
+- `img-gray.py`: 将图片转为灰度图
+
 ### `GraphicUtils.py`
 
 图形学相关代码，包含下列函数：
